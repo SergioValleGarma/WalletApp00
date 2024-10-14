@@ -1,4 +1,4 @@
-package pe.mybusiness.walletapp.data
+package pe.mybusiness.walletapp.data.models
 
 import androidx.compose.ui.graphics.vector.ImageVector
 

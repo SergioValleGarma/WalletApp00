@@ -41,7 +41,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import pe.mybusiness.walletapp.data.Currency
+import pe.mybusiness.walletapp.data.models.Currency
 import pe.mybusiness.walletapp.ui.theme.GreenStart
 
 @Preview(showBackground = true)
@@ -84,7 +84,7 @@ fun CurrenciesView(){
                         tint =MaterialTheme.colorScheme.onSecondaryContainer
                     )
                 }
-Spacer(modifier = Modifier.width(20.dp))
+                Spacer(modifier = Modifier.width(20.dp))
                 Text(text = "Currencies",
                     fontSize = 20.sp,
                     color = MaterialTheme.colorScheme.onSecondaryContainer,
@@ -162,7 +162,7 @@ fun CurrencyItem(index:Int,width: Dp){
                 .background(GreenStart)
                 .padding(4.dp)
             ){
-                Icon(imageVector = currency.icon,
+                Icon(imageVector = Icons.Rounded.AttachMoney,
                     contentDescription = currency.name,
                     tint = Color.White,
                     modifier = Modifier.size(18.dp)
@@ -174,26 +174,27 @@ fun CurrencyItem(index:Int,width: Dp){
                 fontWeight = FontWeight.Bold,
                 fontSize = 18.sp,
                 color = MaterialTheme.colorScheme.onBackground
-                )
-            Text(modifier = Modifier
-                .width(width)
-                .padding(start = 10.dp),
-                text = "$ ${currency.buy}",
-                fontWeight = FontWeight.Bold,
-                fontSize = 16.sp,
-                color = MaterialTheme.colorScheme.onBackground,
-                textAlign = TextAlign.End
             )
-            Text(modifier = Modifier
-                .width(width)
-                .padding(start = 10.dp),
-                text = "$ ${currency.sell}",
-                fontWeight = FontWeight.Bold,
-                fontSize = 16.sp,
-                color = MaterialTheme.colorScheme.onBackground,
-                textAlign = TextAlign.End
-            )
+
         }
+        Text(modifier = Modifier
+            .width(width)
+            .padding(start = 10.dp),
+            text = "$ ${currency.buy}",
+            fontWeight = FontWeight.Bold,
+            fontSize = 16.sp,
+            color = MaterialTheme.colorScheme.onBackground,
+            textAlign = TextAlign.End
+        )
+        Text(modifier = Modifier
+            .width(width)
+            .padding(start = 10.dp),
+            text = "$ ${currency.sell}",
+            fontWeight = FontWeight.Bold,
+            fontSize = 16.sp,
+            color = MaterialTheme.colorScheme.onBackground,
+            textAlign = TextAlign.End
+        )
     }
 }
 
@@ -201,37 +202,37 @@ val currencyItems = listOf(
     Currency(
         name = "USD",
         buy = 3.45f,
-        sell = 3.97f,
-        icon = Icons.Rounded.AttachMoney
+        sell = 3.97f
+        ///icon = Icons.Rounded.AttachMoney
     ),
     Currency(
         name = "EUR",
         buy = 4.89f,
-        sell = 5.54f,
-        icon = Icons.Rounded.Euro
+        sell = 5.54f
+        ///icon = Icons.Rounded.Euro
     ),
     Currency(
         name = "YEN",
         buy = 34.30f,
-        sell = 38.20f,
-        icon = Icons.Rounded.CurrencyYen
+        sell = 38.20f
+        ///icon = Icons.Rounded.CurrencyYen
     ),
     Currency(
         name = "USD",
         buy = 3.45f,
-        sell = 3.97f,
-        icon = Icons.Rounded.AttachMoney
+        sell = 3.97f
+        ///icon = Icons.Rounded.AttachMoney
     ),
     Currency(
         name = "EUR",
         buy = 4.89f,
-        sell = 5.54f,
-        icon = Icons.Rounded.Euro
+        sell = 5.54f
+        ///icon = Icons.Rounded.Euro
     ),
     Currency(
         name = "YEN",
         buy = 34.30f,
-        sell = 38.20f,
-        icon = Icons.Rounded.CurrencyYen
+        sell = 38.20f
+        ///icon = Icons.Rounded.CurrencyYen
     )
 )

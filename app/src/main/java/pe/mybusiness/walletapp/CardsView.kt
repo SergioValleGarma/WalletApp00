@@ -22,7 +22,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import pe.mybusiness.walletapp.data.Card
+import pe.mybusiness.walletapp.data.models.Card
 import pe.mybusiness.walletapp.ui.theme.BlueEnd
 import pe.mybusiness.walletapp.ui.theme.BlueStart
 import pe.mybusiness.walletapp.ui.theme.GreenEnd
