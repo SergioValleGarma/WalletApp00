@@ -200,36 +200,42 @@ fun CurrencyItem(index:Int,width: Dp){
 
 val currencyItems = listOf(
     Currency(
+        id = 1,
         name = "USD",
         buy = 3.45f,
         sell = 3.97f
         ///icon = Icons.Rounded.AttachMoney
     ),
     Currency(
+        id = 2,
         name = "EUR",
         buy = 4.89f,
         sell = 5.54f
         ///icon = Icons.Rounded.Euro
     ),
     Currency(
+        id = 3,
         name = "YEN",
         buy = 34.30f,
         sell = 38.20f
         ///icon = Icons.Rounded.CurrencyYen
     ),
     Currency(
+        id = 4,
         name = "USD",
         buy = 3.45f,
         sell = 3.97f
         ///icon = Icons.Rounded.AttachMoney
     ),
     Currency(
+        id = 5,
         name = "EUR",
         buy = 4.89f,
         sell = 5.54f
         ///icon = Icons.Rounded.Euro
     ),
     Currency(
+        id = 6,
         name = "YEN",
         buy = 34.30f,
         sell = 38.20f
