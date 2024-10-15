@@ -74,6 +74,9 @@ dependencies {
     implementation(libs.com.squareup.retrofit2)
     implementation(libs.retrofit2.converter.gson)
     implementation(libs.google.code.gson)
+    ///androidx-navigation-compose
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.androidx.hilt.navigation.compose)
 
 
     testImplementation(libs.junit)
