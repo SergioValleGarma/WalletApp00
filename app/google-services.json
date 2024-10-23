@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1074338523910",
+    "project_id": "appwallet-31c34",
+    "storage_bucket": "appwallet-31c34.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1074338523910:android:aa1c080026993eb7e50c87",
+        "android_client_info": {
+          "package_name": "pe.mybusiness.walletapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAaD84muPRxSoimUrY1R3gHb5viRuhGXq8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

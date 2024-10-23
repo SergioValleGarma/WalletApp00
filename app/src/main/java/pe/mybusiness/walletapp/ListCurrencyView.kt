@@ -35,7 +35,7 @@ fun ListCurrencyView(
     navigateToAddCurrency:()->Unit,
     currencyViewModel: CurrencyViewModel= hiltViewModel()
 ){
-  val currenciesUiState by currencyViewModel.currencyUiState.collectAsState()
+    val currenciesUiState by currencyViewModel.currencyUiState.collectAsState()
     Scaffold(
         floatingActionButton = {
             FloatingActionButton(onClick = navigateToAddCurrency) {

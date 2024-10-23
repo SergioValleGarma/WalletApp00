@@ -4,5 +4,5 @@ import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp
-class AplicationWallet : Application() {
+class ApplicationWallet : Application() {
 }

@@ -25,6 +25,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -39,12 +40,17 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.hilt.navigation.compose.hiltViewModel
 import pe.mybusiness.walletapp.data.models.Currency
 import pe.mybusiness.walletapp.ui.theme.GreenStart
+import pe.mybusiness.walletapp.viewModels.CurrencyViewModel
 
 @Preview(showBackground = true)
 @Composable
-fun CurrenciesView(){
+fun CurrenciesView(currencyViewModel: CurrencyViewModel = hiltViewModel()){
+    val currencyUiState by currencyViewModel.currencyUiState.collectAsState()
+    val currencyItems = currencyUiState.currencies
+
     var isVisible by remember { mutableStateOf(false) }
     var iconState by remember { mutableStateOf(Icons.Rounded.KeyboardArrowUp) }
     Box (modifier = Modifier
@@ -133,8 +139,9 @@ fun CurrenciesView(){
                                textAlign = TextAlign.End)
                        }
                        Spacer(modifier = Modifier.height(16.dp))
-                       LazyColumn {    items(currencyItems.size){index ->
-                           CurrencyItem(index,width)
+                       LazyColumn {
+                           items(currencyItems.size){index ->
+                           CurrencyItem(currencyItems[index],width)
                        }}
                    }
                }
@@ -144,8 +151,8 @@ fun CurrenciesView(){
 }
 
 @Composable
-fun CurrencyItem(index:Int,width: Dp){
-    val currency = currencyItems[index]
+fun CurrencyItem(currency: Currency,width: Dp){
+    ///val currency = currencyItems[index]
     Row(modifier = Modifier
         .fillMaxWidth()
         .padding(16.dp),
@@ -195,7 +202,7 @@ fun CurrencyItem(index:Int,width: Dp){
         )
     }
 }
-
+/*
 val currencyItems = listOf(
     Currency(
         id = 1,
@@ -239,4 +246,4 @@ val currencyItems = listOf(
         sell = 38.20f
         ///icon = Icons.Rounded.CurrencyYen
     )
-)
+)*/

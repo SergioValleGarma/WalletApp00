@@ -2,6 +2,7 @@ package pe.mybusiness.walletapp.viewModels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.map
@@ -12,6 +13,7 @@ import pe.mybusiness.walletapp.data.models.Currency
 import pe.mybusiness.walletapp.data.repositories.CurrencyRepository
 import javax.inject.Inject
 
+@HiltViewModel
 class CurrencyViewModel @Inject constructor(private val currencyRepository: CurrencyRepository):ViewModel() {
 
     companion object{

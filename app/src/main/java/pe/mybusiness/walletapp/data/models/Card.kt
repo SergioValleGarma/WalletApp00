@@ -7,5 +7,7 @@ data class Card(
     val cardNumber:String,
     val cardName:String,
     val balance:Double,
-    val color:Brush
+    //val color:Brush
+    val startColor: String,
+    val endColor: String
 )
