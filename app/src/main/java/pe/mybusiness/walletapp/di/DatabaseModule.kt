@@ -9,6 +9,7 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import pe.mybusiness.walletapp.data.local.AppDatabase
 import pe.mybusiness.walletapp.data.local.CurrencyDao
+import pe.mybusiness.walletapp.utils.AppConfig
 import javax.inject.Singleton
 
 @InstallIn(SingletonComponent::class)
@@ -25,7 +26,7 @@ object DatabaseModule{
         return Room.databaseBuilder(
             context = context,
             AppDatabase::class.java,
-            "app_database"
+            AppConfig.DATABASE_NAME//"app_database"
         ).build()
     }
 }

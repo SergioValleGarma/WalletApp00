@@ -1,13 +1,18 @@
 package pe.mybusiness.walletapp.di
 
+import android.content.Context
 import dagger.Binds
 import dagger.Module
+import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import pe.mybusiness.walletapp.data.repositories.CardRepository
 import pe.mybusiness.walletapp.data.repositories.CardRepositoryImpl
 import pe.mybusiness.walletapp.data.repositories.CurrencyRepository
 import pe.mybusiness.walletapp.data.repositories.CurrencyRepositoryImpl
+import pe.mybusiness.walletapp.data.repositories.TokenRepository
+import javax.inject.Singleton
 
 @InstallIn(SingletonComponent::class)
 @Module
@@ -17,4 +22,15 @@ abstract class RepositoryModule {
 
     @Binds
     abstract fun bindCardRepository(impl: CardRepositoryImpl): CardRepository
+}
+
+
+@InstallIn(SingletonComponent::class)
+@Module
+object TokenRepositoryModule {
+    @Provides
+    @Singleton
+    fun provideTokenRepository(@ApplicationContext context: Context): TokenRepository {
+        return TokenRepository(context)
+    }
 }

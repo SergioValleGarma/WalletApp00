@@ -5,19 +5,21 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import pe.mybusiness.walletapp.data.services.CardService
+import pe.mybusiness.walletapp.utils.AppConfig
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 @InstallIn(SingletonComponent::class)
 @Module
 object RetrofitModule{
-    private const val BASE_URL= "https://run.mocky.io/v3/3ab15913-4482-42bf-ad09-2db176385e37/"
+    //private const val BASE_URL= "https://localhost:7273/WeatherForecast/Get2/"
+    ///private const val BASE_URL= "https://run.mocky.io/v3/3ab15913-4482-42bf-ad09-2db176385e37/"
     ////private const val BASE_URL="https://run.mocky.io/v3/95f069be-fb73-4aee-9674-6c26c13899c6/"
 
     @Provides
     fun provideRetrofit(): Retrofit{
         return Retrofit.Builder()
-            .baseUrl(BASE_URL)
+            .baseUrl(AppConfig.BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }

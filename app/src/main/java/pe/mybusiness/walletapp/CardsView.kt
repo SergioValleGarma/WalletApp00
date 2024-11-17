@@ -24,6 +24,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
 import pe.mybusiness.walletapp.data.models.Card
 import pe.mybusiness.walletapp.viewModels.CardViewModel
@@ -32,7 +33,7 @@ import pe.mybusiness.walletapp.viewModels.CardViewModel
 @Preview(showBackground = true)
 @Composable
 fun CardsView(){
-    val cardViewModel: CardViewModel = viewModel()
+    val cardViewModel: CardViewModel = hiltViewModel()/*viewModel()*/
     val cardUiState by cardViewModel.cardsUiState.collectAsState()
     val cards = cardUiState.cards
     LazyRow {

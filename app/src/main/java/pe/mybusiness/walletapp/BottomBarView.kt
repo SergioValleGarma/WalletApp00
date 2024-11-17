@@ -18,9 +18,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import pe.mybusiness.walletapp.data.models.BottomNavigation
 
 
-@Preview(showBackground = true)
+///@Preview(showBackground = true)
 @Composable
-fun BottomBarView(){
+fun BottomBarView(navigateTo:(String)-> Unit){
     NavigationBar{
         Row(modifier = Modifier
             .background(MaterialTheme.colorScheme.inverseOnSurface)
@@ -28,7 +28,7 @@ fun BottomBarView(){
             bottomNavigationItems.forEachIndexed { index, item ->
                 NavigationBarItem(
                     selected = index == 0,
-                    onClick = { /*TODO*/ },
+                    onClick = { navigateTo(item.title) },
                     icon = {
                         Icon(
                             imageVector = item.icon,

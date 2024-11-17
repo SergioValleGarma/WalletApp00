@@ -1,5 +1,6 @@
 package pe.mybusiness.walletapp
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -13,15 +14,22 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import dagger.hilt.android.AndroidEntryPoint
 import pe.mybusiness.walletapp.ui.theme.WalletAppTheme
+
 @AndroidEntryPoint
-class MainActivity : ComponentActivity() {
+class LoginActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
         setContent {
             WalletAppTheme {
-                HomeNavigate()
+               LoginView() {
+                    val intent = Intent(this,MainActivity::class.java).apply {
+                        flags= Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    }
+                   startActivity(intent)
+                   finish()
+               }
             }
         }
     }
 }
-
