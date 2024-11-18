@@ -7,11 +7,11 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
-import pe.mybusiness.walletapp.data.repositories.CardRepository
-import pe.mybusiness.walletapp.data.repositories.CardRepositoryImpl
-import pe.mybusiness.walletapp.data.repositories.CurrencyRepository
-import pe.mybusiness.walletapp.data.repositories.CurrencyRepositoryImpl
-import pe.mybusiness.walletapp.data.repositories.TokenRepository
+import pe.mybusiness.walletapp.repositories.CardRepository
+import pe.mybusiness.walletapp.repositories.CardRepositoryImpl
+import pe.mybusiness.walletapp.repositories.CurrencyRepository
+import pe.mybusiness.walletapp.repositories.CurrencyRepositoryImpl
+import pe.mybusiness.walletapp.repositories.TokenRepository
 import javax.inject.Singleton
 
 @InstallIn(SingletonComponent::class)

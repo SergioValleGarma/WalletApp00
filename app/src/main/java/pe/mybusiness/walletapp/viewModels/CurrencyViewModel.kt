@@ -8,9 +8,9 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
-import pe.mybusiness.walletapp.CurrencyUiState
-import pe.mybusiness.walletapp.data.models.Currency
-import pe.mybusiness.walletapp.data.repositories.CurrencyRepository
+import pe.mybusiness.walletapp.models.ui.CurrencyUiState
+import pe.mybusiness.walletapp.models.entities.Currency
+import pe.mybusiness.walletapp.repositories.CurrencyRepository
 import javax.inject.Inject
 
 @HiltViewModel

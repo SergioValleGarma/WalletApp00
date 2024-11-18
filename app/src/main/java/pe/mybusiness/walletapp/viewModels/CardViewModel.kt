@@ -7,8 +7,8 @@ import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
-import pe.mybusiness.walletapp.CardUiState
-import pe.mybusiness.walletapp.data.repositories.CardRepository
+import pe.mybusiness.walletapp.models.ui.CardUiState
+import pe.mybusiness.walletapp.repositories.CardRepository
 import javax.inject.Inject
 
 @HiltViewModel

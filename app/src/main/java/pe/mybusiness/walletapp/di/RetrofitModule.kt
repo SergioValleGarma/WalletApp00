@@ -4,7 +4,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import pe.mybusiness.walletapp.data.services.CardService
+import pe.mybusiness.walletapp.services.restservices.CardService
 import pe.mybusiness.walletapp.utils.AppConfig
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

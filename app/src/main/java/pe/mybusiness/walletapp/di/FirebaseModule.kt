@@ -4,8 +4,8 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import pe.mybusiness.walletapp.data.repositories.TokenRepository
-import pe.mybusiness.walletapp.utils.FirebaseHelper
+import pe.mybusiness.walletapp.repositories.TokenRepository
+import pe.mybusiness.walletapp.services.firebase.FirebaseHelper
 import javax.inject.Singleton
 
 @Module

@@ -7,8 +7,8 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
-import pe.mybusiness.walletapp.data.local.AppDatabase
-import pe.mybusiness.walletapp.data.local.CurrencyDao
+import pe.mybusiness.walletapp.databases.AppDatabase
+import pe.mybusiness.walletapp.databases.CurrencyDao
 import pe.mybusiness.walletapp.utils.AppConfig
 import javax.inject.Singleton
 
@@ -22,7 +22,7 @@ object DatabaseModule{
 
     @Provides
     @Singleton
-    fun provideAppDatabase(@ApplicationContext context: Context): AppDatabase{
+    fun provideAppDatabase(@ApplicationContext context: Context): AppDatabase {
         return Room.databaseBuilder(
             context = context,
             AppDatabase::class.java,
